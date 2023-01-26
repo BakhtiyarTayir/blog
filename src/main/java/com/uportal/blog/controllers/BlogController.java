@@ -17,11 +17,15 @@ public class BlogController {
         this.postRepository = postRepository;
     }
 
-
     @GetMapping("/blog")
     public String blogMain(Model model) {
         Iterable<Post> posts = postRepository.findAll();
         model.addAttribute("posts", posts);
         return "blog-main";
+    }
+
+    @GetMapping("/blog/add")
+    public String addPost(Model model) {
+        return "blog-add";
     }
 }

@@ -6,12 +6,12 @@
     <link  th:href="@{css/bootstrap.css}" rel="stylesheet">
 </head>
 <body>
-    <div th:insert="blocks/header :: header"></div>
+    <div th:insert="~{blocks/header :: header}"></div>
     <div class="container">
         <h1 th:text="${title}"/>
     </div>
 
-    <div th:insert="blocks/footer :: footer"></div>
+    <div th:insert="~{blocks/footer :: footer}"></div>
 <script th:src="@{js/bootstrap.bundle.js}"></script>
 </body>
 </html>
