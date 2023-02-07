@@ -7,6 +7,8 @@ import jakarta.persistence.Id;
 
 @Entity
 public class Message {
+
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
@@ -20,7 +22,9 @@ public class Message {
         this.text = text;
         this.tag = tag;
     }
-
+    public Integer getId() {
+        return id;
+    }
     public String getText() {
         return text;
     }
