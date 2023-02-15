@@ -19,14 +19,14 @@ public class MainController {
     private MessageRepo messageRepo;
 
     @GetMapping("/")
-    public String home(Model model) {
-        model.addAttribute("title", "Главная страница");
+    public String home(Map<String, Object> model) {
+        model.put("title", "Главная");
         return "home";
     }
 
     @GetMapping("/about")
-    public String about(Model model) {
-        model.addAttribute("title", "О нас");
+    public String about(Map<String, Object> model) {
+        model.put("title", "О нас");
         return "about";
     }
 

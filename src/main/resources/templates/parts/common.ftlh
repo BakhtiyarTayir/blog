@@ -10,7 +10,10 @@
     <link rel="stylesheet" href="css/bootstrap.css">
 </head>
 <body>
-    <#nested >
+    <#include "header.ftlh">
+    <#nested>
+
+    <script src="js/bootstrap.bundle.js"></script>
 </body>
 </html>
 </#macro>

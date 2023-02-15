@@ -1,12 +1,10 @@
 <#import "parts/common.ftlh" as c>
+<#import "parts/login.ftlh" as l>
 <@c.page>
     <div class="container mt-5">
         <div class="row">
             <div class="col-md-12">
-                <form action="/logout" method="post">
-                    <input type="hidden" name="_csrf" value="${_csrf.token}">
-                    <input type="submit" value="Sing Out"/>
-                </form>
+                <@l.logout/>
             </div>
         </div>
         <div class="row justify-content-center">
